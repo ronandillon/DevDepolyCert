@@ -1,0 +1,35 @@
+{
+  "name": "DevDeployCert",
+  "version": "4.1.0",
+  "__comment__": "start your first version as 0.0.0",
+  "description": "",
+  "scripts": {},
+  "repository": {
+    "url": "https://github.com/ronandillon/DevDepolyCert.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@store-sfdcbt-net/CICD_gulp-central-sfdx-lib-v1": "latest"
+  },
+  "commonBuildFramework": {
+    "source": [
+      "force-app"
+    ],
+    "skipApexunitCodeCoverage": false,
+    "__comment__": "this setting is only for lwc jest test coverage calculation",
+    "coverageThreshold": 0,
+    "instanceUrl": "https://supportforce.my.salesforce.com",
+    "pluginSettings": {
+      "apex": {
+        "failOnViolation": true,
+        "orgLevelThreshold": 0,
+        "repoLevelThreshold": 0
+      },
+      "eslint": {
+        "failOnViolation": true
+      }
+    }
+  },
+  "dependencies": {}
+}
