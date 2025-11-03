@@ -21,6 +21,10 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
+        <tab>DevDeployApp3</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>DevDeploy__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
