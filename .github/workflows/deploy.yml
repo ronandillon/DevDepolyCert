@@ -15,6 +15,9 @@ jobs:
 
       - name: Install Salesforce CLI
         run: npm install -g sfdx-cli
+        
+      - name: Scanner
+        run: sf scanner run --target force-app/main/default/classes --category 'Security,Performance' --engine pmd --outfile pmd-results.xml --severity-threshold 2
 
       - name: Authenticate to Salesforce
         run: |
