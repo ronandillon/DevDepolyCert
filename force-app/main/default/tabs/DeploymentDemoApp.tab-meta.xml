@@ -2,6 +2,6 @@
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Created by Lightning App Builder</description>
     <flexiPage>DevDeployApp</flexiPage>
-    <label>DevDeployApp3</label>
+    <label>DeploymentDemoApp</label>
     <motif>Custom53: Bell</motif>
 </CustomTab>
