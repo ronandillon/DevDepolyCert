@@ -1,0 +1,26 @@
+name: Deploy to Dev
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: Develop
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Salesforce CLI
+        run: npm install -g sfdx-cli
+
+      - name: Authenticate to Salesforce
+        run: |
+          echo "${{ secrets.SFDX_AUTH_URL }}" > ./sfdx_auth.txt
+          sfdx force:auth:sfdxurl:store -f ./sfdx_auth.txt -a Integration -s
+
+      - name: Deploy metadata
+        run: |
+          sfdx force:source:deploy -u Integration -p force-app --testlevel RunLocalTests
